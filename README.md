@@ -5,6 +5,15 @@ Manage Time with JavaScript
 um objeto com funções e informações do tempo informado, possui varias funcionalides para controle e administração do tempo, 
 podendo ser utilizada para calcúlos com hora ou como um simples relógio.
 
+# Use
+```
+TimeControll ( timeParam, decrement, startParam, just24, timeInThePage, getTime, debug );
+or 
+var timeObj = TimeControll ( timeParam, decrement, startParam, just24, timeInThePage, getTime, debug ); 
+or 
+var timeObj = new TimeControll ( timeParam, decrement, startParam, just24, timeInThePage, getTime, debug );
+```
+
 | Parameter | Value | Utility |
 | --- | --- | --- |
 | timeParam | String or Object | Sets the initial time of the function or receives an object with the settings, if value is not valid, the function set the current time to be started. |
