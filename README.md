@@ -7,10 +7,10 @@ podendo ser utilizada para calcúlos com hora ou como um simples relógio.
 
 | Parameter | Value | Utility |
 | --- | --- | --- |
-| timeParam |  |  |
-| decrement |  |  |
-| startParam |  |  |
-| just24 |  |  |
-| timeInThePage |  |  |
+| timeParam | String ou Objeto | Sets the initial time of the function or receives an object with the settings, if value is not valid, the function set the current time to be started. |
+| decrement | Boolean true/false |  |
+| startParam | Boolean true/false |  |
+| just24 | Boolean true/false |  |
+| timeInThePage | Boolean true/false |  |
 | getTime |  |  |
-| debug |  |  |
+| debug | Boolean true/false |  |
