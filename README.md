@@ -1,9 +1,7 @@
 # TimeControll
 Manage Time with JavaScript
 
-**TimeControll** pode ser utlizada com uma função ou instanciada como um objeto em ambas as formas será retornado 
-um objeto com funções e informações do tempo informado, possui varias funcionalides para controle e administração do tempo, 
-podendo ser utilizada para calcúlos com hora ou como um simples relógio.
+**TimeControll** can be used with a function or instantiated as an object in both forms will be returned an object with functions and information of the time informed, has several functionalities for control and administration of time, and can be used for calculation with time or as a simple clock.
 
 # Usability
 ```
