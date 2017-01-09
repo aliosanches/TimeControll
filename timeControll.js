@@ -198,11 +198,28 @@ function TimeControll ( timeParam, decrement, startParam, just24, timeInThePage,
         return sec_to_time( time_to_sec( timeCompare ) - time_to_sec( time ) ).replace('-', '');
     }
     main.pretty = function(){
+        var language = 'en-US';
+        if(typeof navigator.browserLanguage != 'undefined'){
+            language = navigator.browserLanguage;
+        }else{
+            language = navigator.language;
+        }
+
+        var horaText = 'hour';
+        var minuteText = 'minute';
+        var secondText = 'second';
+        var and = 'and';
+        if(language == 'pt-BR'){
+            horaText = 'hora';
+            minuteText = 'minuto';
+            secondText = 'segundo';
+            and = 'e';
+        }
         var arrTime = timeParam.split( ':' );
-        var hourText = ( arrTime[0] > 0 ? arrTime[0] + ' ' + ( arrTime[0] == 1 ? 'hora' : 'horas' ) : '' );
-        var minutesText = ( arrTime[1] > 0 ? arrTime[1] + ' ' + ( arrTime[1] == 1 ? 'minuto' : 'minutos' ) : '' );
-        var secondsText = ( arrTime[2] > 0 ? arrTime[2] + ' ' + ( arrTime[2] == 1 ? 'segundo' : 'segundos' ) : '' );
-        return (hourText.length > 0 ? hourText + ( minutesText.length > 0 || secondsText.length > 0 ? ' e ' : '' ) : '' ) + (minutesText.length > 0 ? minutesText + ( secondsText.length > 0 ? ' e ' : '' ) : '' ) + secondsText;
+        var hourText = ( arrTime[0] > 0 ? arrTime[0] + ' ' + ( arrTime[0] == 1 ? horaText : horaText + 's' ) : '' );
+        var minutesText = ( arrTime[1] > 0 ? arrTime[1] + ' ' + ( arrTime[1] == 1 ? minuteText : minuteText + 's' ) : '' );
+        var secondsText = ( arrTime[2] > 0 ? arrTime[2] + ' ' + ( arrTime[2] == 1 ? secondText : secondText + 's' ) : '' );
+        return (hourText.length > 0 ? hourText + ( minutesText.length > 0 || secondsText.length > 0 ? ' ' + and + ' ' : '' ) : '' ) + (minutesText.length > 0 ? minutesText + ( secondsText.length > 0 ? ' ' + and + ' ' : '' ) : '' ) + secondsText;
     } 
 
     if(main.startParam === true){
